@@ -1,0 +1,20 @@
+<html> 
+
+    <div id="my_box_realtime" style= "background-color: red; position: absolute; right: 70; bottom: 70; min-width: 100px; min-height: 100px"></div>
+
+    <script type="text/javascript"> 
+
+    let joyi = document.getElementById("my_box_realtime");
+
+    let raqami = 70;
+
+      function move_box() {
+        joyi.style.right = raqami;
+        joyi.style.bottom = raqami;
+        raqami--;
+      }
+  
+      setInterval(move_box, 500);
+
+    </script> 
+</html>

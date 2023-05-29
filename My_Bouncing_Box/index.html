@@ -1,0 +1,33 @@
+<html>
+<head>
+    <title>T.Oqilbek</title>
+</head>
+<body style="background-color: black;">
+
+    <div id="my_bouncing_box" style="background-color: blue; border-radius: 3px; position: absolute; left: 0px; top: 0px; min-width: 100px; min-height: 100px; text-align: center; font-weight: bold; color: #999;">T.Oqilbek</div>
+
+    <script type="text/javascript">
+        var tunel = document.getElementById("my_bouncing_box");
+
+        var x = 1;
+        var y = 1;
+        var ong_uzunlik = window.innerWidth - 100;
+        var past_uzunlik = window.innerHeight - 100;
+
+
+        setInterval(function() {
+            tunel.style.left = parseInt(tunel.style.left, 10) + x;
+            tunel.style.top = parseInt(tunel.style.top, 10) + y;
+            var x_x = parseInt(tunel.style.left, 10);
+            var y_y = parseInt(tunel.style.top, 10);
+
+            if (x_x === 0 || x_x === ong_uzunlik) {
+                x *= -1;
+            }
+            if (y_y === 0 || y_y === past_uzunlik) {
+                y *= -1;
+            }
+        }, 5);
+    </script>
+</body>
+</html>
